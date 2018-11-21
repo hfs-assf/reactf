@@ -1,28 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import axios from 'axios';
+import {Route} from 'react-router-dom';
+import Zoom from 'react-reveal/Zoom';
+import Flip from 'react-reveal/Flip'
+import Navbar from './component/navbar';
+import Home from './component/home';
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Navbar />  
+        <Route exact path="/" component={Home}/>
+                     
       </div>
     );
   }
 }
 
 export default App;
+ 
